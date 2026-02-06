@@ -27,6 +27,7 @@ const images = {
   reshapeProject: "/assets/portfolio/reshapeProject.webp",
   realTalkProject: "/assets/portfolio/realTalkProject.webp",
   italianMafiaProject: "/assets/portfolio/ItalianMafiaProject.webp",
+  illumeProject: "/assets/portfolio/illumeProject.jpg",
 };
 
 const skills = [
@@ -107,7 +108,8 @@ const projects = [
     title: "Ilumee",
     description:
       "A sleek and responsive landing page designed for modern startups to showcase their products effectively.",
-    type: "phone",
+    type: "image",
+    image: images.illumeProject,
     href: "https://apps.apple.com/us/app/ilumee/id6747663814",
   },
   {
@@ -192,7 +194,7 @@ export default function Home() {
         <aside className={styles.sidebar}>
           <div className={`${styles.card} ${styles.stickyCard}`}>
             <div className={styles.photo}>
-              <img src="/assets/portfolio/profile.png" alt="Miras Zhandosov" />
+              <img src="/assets/portfolio/me.png" alt="Miras Zhandosov" />
             </div>
             <div className={styles.name}>Miras Zhandosov</div>
             <div className={styles.title}>Graphic and UX/UI Designer</div>

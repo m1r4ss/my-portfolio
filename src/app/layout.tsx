@@ -5,6 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "My Portfolio",
   description: "MIrasz Zhandosov. UX/UI Designer based in Almaty.",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: "https://framerusercontent.com/images/Uv0nZqIXdSQq9LuQMqh4JWueM.png",
   },
