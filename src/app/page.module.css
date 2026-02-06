@@ -113,8 +113,11 @@
 .primaryButton {
   border-radius: 5px;
   padding: 10px 20px;
+  font-family: "Gilroy Medium", "Gilroy", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
   border: 1px solid #dfdfdf;
   background: #ffffff;
   color: #272727;
@@ -130,6 +133,14 @@
   background: #272727;
   color: #ffffff;
   border-color: transparent;
+}
+
+.primaryButton:link,
+.primaryButton:visited,
+.primaryButton:hover,
+.primaryButton:active {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
 
 @media (hover: hover) and (pointer: fine) {
