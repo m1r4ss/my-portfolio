@@ -148,8 +148,9 @@
   .primaryButton:hover,
   .linkCard:hover,
   .inlineButton:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    transform: none;
+    box-shadow: none;
+    background-color: #f0f0f0;
   }
 }
 
@@ -549,6 +550,7 @@
   color: #272727;
   font-size: 15px;
   cursor: pointer;
+  width: fit-content;
 }
 
 .inlineChevron {
