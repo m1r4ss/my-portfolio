@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "https://framerusercontent.com/images/Uv0nZqIXdSQq9LuQMqh4JWueM.png",
+    icon: "/assets/portfolio/favicon.svg",
+    shortcut: "/assets/portfolio/favicon.svg",
+    apple: "/assets/portfolio/favicon.svg",
   },
   openGraph: {
     title: "My Portfolio",
