@@ -28,6 +28,9 @@ const images = {
   realTalkProject: "/assets/portfolio/realTalkProject.webp",
   italianMafiaProject: "/assets/portfolio/ItalianMafiaProject.webp",
   illumeProject: "/assets/portfolio/illumeProject.jpg",
+  htmlStack: "/assets/portfolio/htmlStack.png",
+  cssStack: "/assets/portfolio/cssStack.png",
+  jsStack: "/assets/portfolio/jsStack.png",
 };
 
 const skills = [
@@ -323,6 +326,15 @@ export default function Home() {
               <div className={styles.techLogo}>
                 <img src={images.image4} alt="" />
               </div>
+              <div className={styles.techLogo}>
+                <img src={images.htmlStack} alt="" />
+              </div>
+              <div className={styles.techLogo}>
+                <img src={images.cssStack} alt="" />
+              </div>
+              <div className={styles.techLogo}>
+                <img src={images.jsStack} alt="" />
+              </div>
               <div className={`${styles.techLogo} ${styles.realTechLogo}`}>
                 <span className={styles.logoText}>RealTalk.tech</span>
               </div>
@@ -337,6 +349,15 @@ export default function Home() {
               </div>
               <div className={styles.techLogo}>
                 <img src={images.image4} alt="" />
+              </div>
+              <div className={styles.techLogo}>
+                <img src={images.htmlStack} alt="" />
+              </div>
+              <div className={styles.techLogo}>
+                <img src={images.cssStack} alt="" />
+              </div>
+              <div className={styles.techLogo}>
+                <img src={images.jsStack} alt="" />
               </div>
               <div className={`${styles.techLogo} ${styles.realTechLogo}`}>
                 <span className={styles.logoText}>RealTalk.tech</span>
