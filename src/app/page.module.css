@@ -55,7 +55,7 @@
 .photo {
   border: 1px solid #8f8f8f;
   border-radius: 10px;
-  height: 184px;
+  height: 206px;
   width: 100%;
   overflow: hidden;
   background: #ffffff;
@@ -629,7 +629,7 @@
   }
 
   .photo {
-    height: 170px;
+    height: 188px;
   }
 
   .techRow {
@@ -665,7 +665,7 @@
   }
 
   .photo {
-    height: 160px;
+    height: 176px;
   }
 
   .name {
