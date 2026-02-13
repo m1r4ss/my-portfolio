@@ -250,7 +250,8 @@
 .logoBoxLight img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 .logoBox img {
@@ -564,8 +565,11 @@
 }
 
 .linksGrid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-areas:
+    "instagram instagram github"
+    "linkedin mail meeting";
   gap: 10px;
 }
 
@@ -582,6 +586,8 @@
   gap: 9px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  width: 100%;
+  min-width: 0;
 }
 
 .linkCard:link,
@@ -603,19 +609,23 @@
 }
 
 .large {
-  width: 347px;
+  grid-area: instagram;
 }
 
 .medium {
-  width: 227px;
+  grid-area: github;
 }
 
 .small {
-  width: 195px;
+  grid-area: linkedin;
+}
+
+.auto {
+  grid-area: mail;
 }
 
 .full {
-  flex: 1 0 100%;
+  grid-area: meeting;
 }
 
 @media (max-width: 1100px) {
@@ -704,10 +714,15 @@
     font-size: 16px;
   }
 
-  .tags,
-  .linksGrid {
+  .tags {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .linksGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
   }
 
   .tag,
@@ -716,6 +731,14 @@
   .medium,
   .small {
     width: 100%;
+  }
+
+  .large,
+  .medium,
+  .small,
+  .auto,
+  .full {
+    grid-area: auto;
   }
 
   .listItem {
