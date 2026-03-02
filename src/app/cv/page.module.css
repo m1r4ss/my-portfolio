@@ -1,0 +1,126 @@
+.page {
+  min-height: 100vh;
+  background: #f6f6f6;
+  padding: 24px;
+}
+
+.shell {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid #dfdfdf;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #272727;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid #dfdfdf;
+  background: #272727;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid #dfdfdf;
+  background: #ffffff;
+  color: #272727;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.mobileCard {
+  display: none;
+  padding: 16px;
+  border: 1px solid #dfdfdf;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.mobileText {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #8f8f8f;
+}
+
+.mobileActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.viewer {
+  width: 100%;
+  height: min(78vh, 1000px);
+  border: 1px solid #dfdfdf;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 14px;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mobileCard {
+    display: block;
+  }
+
+  .mobileActions {
+    flex-direction: column;
+  }
+
+  .mobileActions a {
+    width: 100%;
+  }
+
+  .viewer {
+    display: none;
+  }
+}

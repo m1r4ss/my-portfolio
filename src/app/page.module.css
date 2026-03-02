@@ -130,6 +130,10 @@
   align-items: center;
 }
 
+.mobileOnlyButton {
+  display: none;
+}
+
 .primaryButton {
   background: #272727;
   color: #ffffff;
@@ -737,6 +741,14 @@
   .outlineButton,
   .primaryButton {
     font-size: 16px;
+  }
+
+  .desktopOnlyButton {
+    display: none;
+  }
+
+  .mobileOnlyButton {
+    display: inline-flex;
   }
 
   .tags {

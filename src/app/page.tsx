@@ -267,8 +267,16 @@ export default function Home() {
               m1r4s.kz@gmail.com
             </div>
             <a
-              className={styles.outlineButton}
-              href="https://drive.google.com/file/d/1VnFIUHdrcoHWMejhIYIb_ZQiygnWpKGB/view?usp=sharing"
+              className={`${styles.outlineButton} ${styles.desktopOnlyButton}`}
+              href="/cv/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV
+            </a>
+            <a
+              className={`${styles.outlineButton} ${styles.mobileOnlyButton}`}
+              href="/assets/portfolio/CV_Miras.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
