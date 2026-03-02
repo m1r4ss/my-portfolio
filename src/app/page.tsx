@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
 const images = {
@@ -191,6 +191,54 @@ export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [openEducationIndex, setOpenEducationIndex] = useState<number | null>(0);
 
+  // #region agent log
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    fetch("http://127.0.0.1:7242/ingest/f0ad6209-1c61-408a-8570-33cfd176d91a", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Debug-Session-Id": "3627a8",
+      },
+      body: JSON.stringify({
+        sessionId: "3627a8",
+        runId: "initial",
+        hypothesisId: "H1",
+        location: "src/app/page.tsx:Home/useEffect",
+        message: "Home mounted on client",
+        data: {
+          userAgent: window.navigator.userAgent,
+          width: window.innerWidth,
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    fetch("http://127.0.0.1:7242/ingest/f0ad6209-1c61-408a-8570-33cfd176d91a", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Debug-Session-Id": "3627a8",
+      },
+      body: JSON.stringify({
+        sessionId: "3627a8",
+        runId: "initial",
+        hypothesisId: "H2",
+        location: "src/app/page.tsx:Home/useEffect-openIndex",
+        message: "Accordion state changed",
+        data: {
+          openIndex,
+          openEducationIndex,
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+  }, [openIndex, openEducationIndex]);
+  // #endregion
+
   return (
     <div className={styles.page}>
       <main className={styles.layout}>
@@ -209,9 +257,15 @@ export default function Home() {
           </div>
 
           <div className={`${styles.card} ${styles.stickyCardSecondary}`}>
-            <div className={styles.contactLine}>m1r4s.com</div>
-            <div className={styles.contactLine}>+7 771 856-12-19</div>
-            <div className={styles.contactLine}>m1r4s.kz@gmail.com</div>
+            <div className={styles.contactLine} data-contact="muted">
+              m1r4s.com
+            </div>
+            <div className={styles.contactLine} data-contact="muted">
+              +7 771 856-12-19
+            </div>
+            <div className={styles.contactLine} data-contact="muted">
+              m1r4s.kz@gmail.com
+            </div>
             <a
               className={styles.outlineButton}
               href="https://drive.google.com/file/d/1VnFIUHdrcoHWMejhIYIb_ZQiygnWpKGB/view?usp=sharing"
@@ -222,6 +276,7 @@ export default function Home() {
             </a>
             <a
               className={styles.primaryButton}
+              data-button="primary"
               href="mailto:m1r4s.kz@gmail.com"
             >
               Contact Me
@@ -475,6 +530,7 @@ export default function Home() {
                 <a
                   key={link.label}
                   className={`${styles.linkCard} ${styles[link.width]}`}
+                  data-link-card="true"
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
